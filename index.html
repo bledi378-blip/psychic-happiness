@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> Айбек & Нургиза </title>
+
+<style>
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* VIDEO */
+.video-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
+}
+
+/* Жумшак караңгылатуу */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(35, 20, 20, 0.25);
+    z-index: -2;
+}
+
+/* Биринчи бет */
+.cover {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 25px;
+}
+
+/* Жогорудагы текст */
+.subtitle {
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+
+    text-shadow: 0 2px 10px rgba(0,0,0,.4);
+}
+
+/* АТТАР */
+.names {
+    font-size: clamp(45px, 11vw, 85px);
+    font-weight: 400;
+    line-height: 1.15;
+
+    margin-bottom: 22px;
+
+    text-shadow:
+        0 3px 20px rgba(0,0,0,.45);
+}
+
+/* Дата */
+.date {
+    font-size: 18px;
+    letter-spacing: 5px;
+    margin-bottom: 45px;
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,.4);
+}
+
+/* АЧУУ БАСKЫЧЫ */
+.open-btn {
+    display: inline-block;
+
+    padding: 16px 34px;
+
+    border: 1px solid rgba(255,255,255,.85);
+    border-radius: 40px;
+
+    background: rgba(255,255,255,.12);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.25);
+
+    transition: all .35s ease;
+}
+
+.open-btn:hover {
+    background: rgba(255,255,255,.28);
+    transform: scale(1.06);
+}
+
+/* Телефон */
+@media(max-width:600px) {
+
+    .subtitle {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .names {
+        font-size: 48px;
+    }
+
+    .date {
+        font-size: 15px;
+        letter-spacing: 4px;
+    }
+
+    .open-btn {
+        padding: 14px 28px;
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ФОНДУК ВИДЕО -->
+<video
+    class="video-bg"
+    autoplay
+    muted
+    loop
+    playsinline>
+
+    <source src="video.mp4" type="video/mp4">
+
+</video>
+
+<!-- ЖУМШАК КАРАҢГЫ ФОН -->
+<div class="overlay"></div>
+
+<!-- БИРИНЧИ БЕТ -->
+<main class="cover">
+
+    <div class="subtitle">
+        Кыз узатуу
+    </div>
+
+    <div class="names">
+         Наргиза
+    </div>
+
+    <div class="date">
+        20 · 10 · 2026
+    </div>
+
+    <a
+        class="open-btn"
+        href="https://first-engaged-taro.tilda.ws/chakyruu123456">
+
+        ЧАКЫРУУНУ АЧУУ
+
+    </a>
+
+</main>
+
+</body>
+</html>
